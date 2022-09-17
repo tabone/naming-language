@@ -5,10 +5,13 @@ const path = require('path')
 module.exports = {
   entry: './src/index.js',
 
+  target: "node",
+
   output: {
     path: path.join(__dirname, 'dist'),
+
     library: {
-      type: 'umd',
+      type: 'umd2',
       name: 'LanguageGenerator'
     }
   },
@@ -17,7 +20,7 @@ module.exports = {
     rules: [
       {
         test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /(node_modules)/,
         use: {
           loader: 'babel-loader',
           options: {
