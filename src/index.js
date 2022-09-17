@@ -256,14 +256,14 @@ function makeLanguage (seed, type) {
   }
 }
 
-export function makeBasicLanguage (seed) {
+export function makeBasicLanguage (seed = (new Date()).getTime()) {
   return makeLanguage(seed, 'basic')
 }
 
-export function makeOrthoLanguage (seed) {
+export function makeOrthoLanguage (seed = (new Date()).getTime()) {
   return makeLanguage(seed, 'ortho')
 }
 
-export function makeRandomLanguage (seed) {
+export function makeRandomLanguage (seed = (new Date()).getTime()) {
   return makeLanguage(seed, 'random')
 }
